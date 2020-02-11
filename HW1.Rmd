@@ -1,0 +1,25 @@
+---
+title: "HW1"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+
+```
+
+## Read the data 
+```{r import_Data}
+HW1_data=
+  read_csv(file="./data/HW2dat.csv")
+```
+install.packages("psych")
+install.packages("GPArotation")
+
+```{r install_packages}
+library(psych)
+library(GPArotation)
+```
+
