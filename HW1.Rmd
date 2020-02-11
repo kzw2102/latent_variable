@@ -23,3 +23,38 @@ library(psych)
 library(GPArotation)
 ```
 
+###descriptive statistics 
+```{r}
+summary(HW1_data)
+```
+
+### adds the data so variable names can be used without pre-specificaiton of data names
+```{r}
+attach(HW1_data)
+```
+
+###create an object with just the variables we want to analyze
+```{r}
+usevars<-cbind(C1, C2, C3, C4, C5)
+```
+
+###Using polychoric correlation and do parallel anlaysis of eigenvalues
+```{r}
+HW1parallel<-fa.parallel.poly(usevars)
+str(HW1parallel)
+HW1parallel$pc.values
+HW1parallel$pc.sim$mean
+```
+### Using Pearson Correlation
+```{r}
+HW1parallel.pearson<-fa.parallel(usevars)
+str(HW1parallel.pearson)
+HW1parallel.pearson$pc.values
+HW1parallel.pearson$pc.sim$mean
+```
+### cronbach's alpha
+```{r}
+HW1alpha<- alpha(usevars)
+HW1alpha
+```
+
