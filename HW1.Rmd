@@ -33,25 +33,28 @@ summary(HW1_data)
 attach(HW1_data)
 ```
 
+## Question 1: Obtain eigenvalues and scree plot associated with the Pearson Correlation matrix of the 5 items 
+
 ###create an object with just the variables we want to analyze
 ```{r}
-usevars<-cbind(C1, C2, C3, C4, C5)
+usevars_1<-cbind(C1, C2, C3, C4, C5)
+```
+### Using Pearson Correlation
+```{r}
+HW1parallel_pearson<-fa.parallel(usevars_1)
+str(HW1parallel_pearson)
+HW1parallel_pearson$pc.values
+#HW1parallel_pearson$pc.sim$mean
 ```
 
 ###Using polychoric correlation and do parallel anlaysis of eigenvalues
 ```{r}
-HW1parallel<-fa.parallel.poly(usevars)
-str(HW1parallel)
+HW1parallel_1<-fa.parallel.poly(usevars_1)
+str(HW1parallel_a)
 HW1parallel$pc.values
 HW1parallel$pc.sim$mean
 ```
-### Using Pearson Correlation
-```{r}
-HW1parallel.pearson<-fa.parallel(usevars)
-str(HW1parallel.pearson)
-HW1parallel.pearson$pc.values
-HW1parallel.pearson$pc.sim$mean
-```
+
 ### cronbach's alpha
 ```{r}
 HW1alpha<- alpha(usevars)
