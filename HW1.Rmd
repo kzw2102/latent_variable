@@ -46,15 +46,6 @@ str(HW1parallel_pearson)
 HW1parallel_pearson$pc.values
 #HW1parallel_pearson$pc.sim$mean
 ```
-
-###Using polychoric correlation and do parallel anlaysis of eigenvalues
-```{r}
-HW1parallel_1<-fa.parallel.poly(usevars_1)
-str(HW1parallel_a)
-HW1parallel$pc.values
-HW1parallel$pc.sim$mean
-```
-
 ### Question 2: Report the internal consistency associated with simple sum 
 ###Using polychoric correlation and do parallel anlaysis of eigenvalues
 
@@ -62,12 +53,6 @@ HW1parallel$pc.sim$mean
 usevars_2<-cbind(C1, C2, C3, C4_R, C5_R)
 ```
 
-```{r}
-HW1parallel_2<-fa.parallel.poly(usevars_2)
-str(HW1parallel_2)
-HW1parallel_2$pc.values
-HW1parallel_2$pc.sim$mean
-```
 ### cronbach's alpha
 ```{r}
 HW1alpha<- alpha(usevars_2)
