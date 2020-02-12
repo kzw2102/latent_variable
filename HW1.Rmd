@@ -58,4 +58,9 @@ usevars_2<-cbind(C1, C2, C3, C4_R, C5_R)
 HW1alpha<- alpha(usevars_2)
 HW1alpha
 ```
+# Question 3: 
+```{r}
+HW1alpha<- alpha(usevars_1)
+HW1alpha
+```
 
