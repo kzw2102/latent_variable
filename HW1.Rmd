@@ -63,4 +63,8 @@ HW1alpha
 HW1alpha<- alpha(usevars_1)
 HW1alpha
 ```
-
+```{r}
+usevars_3<-cbind(C1, C2, C3)
+HW1alpha<- alpha(usevars_3)
+HW1alpha
+```

@@ -1,0 +1,21 @@
+---
+title: "HW2"
+output: github_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(psych)
+library(GPArotation)
+
+```
+
+## Read the data 
+```{r import_Data}
+HW2_data=
+  read_csv(file="./data/dat_hw3.csv")
+```
+
+## EFA Analysis
+*just kidding this requires M plus.
